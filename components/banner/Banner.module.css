@@ -1,5 +1,7 @@
 /** By default, this is a mobile breakpoint **/
 .container {
+    position: relative;
+    z-index: 2;
     margin-bottom: 1rem;
   }
   

@@ -51,6 +51,19 @@ export default function Home(props) {
 
 export async function getStaticProps(context) {
   //normally fetched here, then passed to the component by returning props
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'fsq3T09iEGFvhqBvIrBi3JOZ/elz+lAZQ325tloliSbXhDA='
+    }
+  };
+  
+  const data = fetch('https://api.foursquare.com/v3/places/search?query=coffee&ll=39.28760039194706%2C-76.63560688853784&limit=6', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+
   return {
     props: {
       coffeeStores: coffeeStoresData,

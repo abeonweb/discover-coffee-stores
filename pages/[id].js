@@ -2,6 +2,8 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import Head from "next/head";
 
+
+
 const Nollywood = () => {
     const router = useRouter()
     return (
@@ -16,3 +18,19 @@ const Nollywood = () => {
 }
 
 export default Nollywood
+
+export async function getStaticProps() {
+    return {
+        props: {
+
+        }
+    }
+}
+
+export async function getStaticPaths() {
+    return {
+        props: {
+
+        }
+    }
+}
